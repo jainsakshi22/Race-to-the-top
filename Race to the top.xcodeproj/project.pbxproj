@@ -14,6 +14,7 @@
 		530388C31A08094F001602ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530388C21A08094F001602ED /* Images.xcassets */; };
 		530388C61A08094F001602ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 530388C41A08094F001602ED /* LaunchScreen.xib */; };
 		530388D21A08094F001602ED /* Race_to_the_topTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 530388D11A08094F001602ED /* Race_to_the_topTests.m */; };
+		530388E01A080A41001602ED /* RTSpaceShipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 530388DF1A080A41001602ED /* RTSpaceShipView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		530388CB1A08094F001602ED /* Race to the topTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Race to the topTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		530388D01A08094F001602ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		530388D11A08094F001602ED /* Race_to_the_topTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Race_to_the_topTests.m; sourceTree = "<group>"; };
+		530388DE1A080A41001602ED /* RTSpaceShipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTSpaceShipView.h; path = ../RTSpaceShipView.h; sourceTree = "<group>"; };
+		530388DF1A080A41001602ED /* RTSpaceShipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTSpaceShipView.m; path = ../RTSpaceShipView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +86,11 @@
 			children = (
 				530388B91A08094F001602ED /* AppDelegate.h */,
 				530388BA1A08094F001602ED /* AppDelegate.m */,
+				530388BF1A08094F001602ED /* Main.storyboard */,
 				530388BC1A08094F001602ED /* ViewController.h */,
 				530388BD1A08094F001602ED /* ViewController.m */,
-				530388BF1A08094F001602ED /* Main.storyboard */,
+				530388DE1A080A41001602ED /* RTSpaceShipView.h */,
+				530388DF1A080A41001602ED /* RTSpaceShipView.m */,
 				530388C21A08094F001602ED /* Images.xcassets */,
 				530388C41A08094F001602ED /* LaunchScreen.xib */,
 				530388B51A08094F001602ED /* Supporting Files */,
@@ -219,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				530388BE1A08094F001602ED /* ViewController.m in Sources */,
+				530388E01A080A41001602ED /* RTSpaceShipView.m in Sources */,
 				530388BB1A08094F001602ED /* AppDelegate.m in Sources */,
 				530388B81A08094F001602ED /* main.m in Sources */,
 			);
