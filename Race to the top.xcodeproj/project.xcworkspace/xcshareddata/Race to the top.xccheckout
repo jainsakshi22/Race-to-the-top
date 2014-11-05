@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>11CFED78-7DF7-4F93-A3C8-FCDA3F1B9D9A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Race to the top</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>099DBDA257BFF8389C31D90CA4CCEDD8A60B248B</key>
+		<string>https://github.com/jainsakshi22/Race-to-the-top.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Race to the top.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>099DBDA257BFF8389C31D90CA4CCEDD8A60B248B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jainsakshi22/Race-to-the-top.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>099DBDA257BFF8389C31D90CA4CCEDD8A60B248B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>099DBDA257BFF8389C31D90CA4CCEDD8A60B248B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Race%20to%20the%20top</string>
+		</dict>
+	</array>
+</dict>
+</plist>
