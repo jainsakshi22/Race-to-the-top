@@ -24,6 +24,9 @@
     //Used in opening a folder
     tapRecognizer.numberOfTapsRequired = 2;
     [self.pathView addGestureRecognizer:tapRecognizer];
+    
+    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
+    [self.pathView addGestureRecognizer:panRecognizer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,7 +34,13 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)tapDetected : (UITapGestureRecognizer *) tapRecognizer
+-(void)panDetected : (UIPanGestureRecognizer *)panRecognizer
+{
+    CGPoint panLocation = [panRecognizer locationInView : self.pathView];
+    NSLog(@"I'm at location (%f,%f)", panLocation.x, panLocation.y);
+}
+
+-(void)tapDetected : (UITapGestureRecognizer *)tapRecognizer
 {
     NSLog(@"Tap Detected");
     CGPoint tapLocation = [tapRecognizer locationInView: self.pathView];
