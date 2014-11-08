@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tXG-x0-oyL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mount-fuji-and-mount-hoei.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tXG-x0-oyL">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
@@ -51,4 +51,7 @@
             <point key="canvasLocation" x="856.5" y="60"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mount-fuji-and-mount-hoei.jpg" width="656" height="491"/>
+    </resources>
 </document>
