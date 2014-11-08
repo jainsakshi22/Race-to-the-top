@@ -45,6 +45,9 @@
                         </variation>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="pathView" destination="yIV-9X-Me9" id="aZ8-CK-DnO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnA-8r-5A1" sceneMemberID="firstResponder"/>
             </objects>

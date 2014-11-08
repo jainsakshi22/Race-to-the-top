@@ -44,7 +44,7 @@
         
         CGPoint fifthPoint = CGPointMake(rect.size.width * (1/6.0), rect.size.height * (6/12.0));
         
-        CGPoint sixthPoint = CGPointMake(rect.size.width * (1/6.0), rect.size.height * (6/12.0));
+     //   CGPoint sixthPoint = CGPointMake(rect.size.width * (1/6.0), rect.size.height * (6/12.0));
         
         CGPoint seventhPoint = CGPointMake(rect.size.width * (1/3.0), rect.size.height * (2/6.0));
         
@@ -66,7 +66,7 @@
         
         CGPoint fifthPointForSecondPath = CGPointMake(rect.size.width * (1/6.0) - PATH_WIDTH, rect.size.height * (6/12.0) + PATH_WIDTH / 2);
         
-        CGPoint sixthPointForSecondPath = CGPointMake(rect.size.width * (1/6.0) - PATH_WIDTH, rect.size.height * (6/12.0));
+     //   CGPoint sixthPointForSecondPath = CGPointMake(rect.size.width * (1/6.0) - PATH_WIDTH, rect.size.height * (6/12.0));
         
         CGPoint seventhPointForSecondPath = CGPointMake(rect.size.width * (1/3.0) - PATH_WIDTH / 4, rect.size.height * (2/6.0) - PATH_WIDTH);
         
@@ -85,23 +85,25 @@
         leftMountainPath.lineWidth = 4.0;
         
         [rightMountainPath moveToPoint:firstPoint];
-        
+    
         [rightMountainPath addLineToPoint:secondPoint];
-        
+    
         [rightMountainPath addLineToPoint:thirdPoint];
-        
+    
         [rightMountainPath addLineToPoint:fourthPoint];
-        
+    
         [rightMountainPath addLineToPoint:fifthPoint];
-        
-        [rightMountainPath addLineToPoint:sixthPoint];
-        
+    
+    //Fifth and sixth point has same coordinates
+//        [rightMountainPath addLineToPoint:sixthPoint];
+    
         [rightMountainPath addLineToPoint:seventhPoint];
-        
+    
         [rightMountainPath addLineToPoint:eigthPoint];
-        
+
         [rightMountainPath addQuadCurveToPoint:ninthPoint controlPoint:controlPoint];
-        
+
+    
         [leftMountainPath moveToPoint:firstPointForSecondPath];
         
         [leftMountainPath addLineToPoint:secondPointForSecondPath];
@@ -111,8 +113,9 @@
         [leftMountainPath addLineToPoint:fourthPointForSecondPath];
         
         [leftMountainPath addLineToPoint:fifthPointForSecondPath];
-        
-        [leftMountainPath addLineToPoint:sixthPointForSecondPath];
+    
+        //Fifth and sixth point has same coordinates
+        //[leftMountainPath addLineToPoint:sixthPointForSecondPath];
         
         [leftMountainPath addLineToPoint:seventhPointForSecondPath];
         
