@@ -18,6 +18,7 @@
 		5308B8DE1A0931A5007676FF /* Main.IPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5308B8DD1A0931A5007676FF /* Main.IPad.storyboard */; };
 		530A61101A0A8CA000E214FE /* mount-fuji-and-mount-hoei.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 530A610F1A0A8CA000E214FE /* mount-fuji-and-mount-hoei.jpg */; };
 		530A61131A0A8EF300E214FE /* RTMountainPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 530A61121A0A8EF300E214FE /* RTMountainPath.m */; };
+		530A61161A0AA4B300E214FE /* RTPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 530A61151A0AA4B300E214FE /* RTPathView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		530A610F1A0A8CA000E214FE /* mount-fuji-and-mount-hoei.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mount-fuji-and-mount-hoei.jpg"; sourceTree = "<group>"; };
 		530A61111A0A8EF300E214FE /* RTMountainPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMountainPath.h; sourceTree = "<group>"; };
 		530A61121A0A8EF300E214FE /* RTMountainPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMountainPath.m; sourceTree = "<group>"; };
+		530A61141A0AA4B300E214FE /* RTPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTPathView.h; sourceTree = "<group>"; };
+		530A61151A0AA4B300E214FE /* RTPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTPathView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,12 +98,14 @@
 				530388BA1A08094F001602ED /* AppDelegate.m */,
 				5308B8DD1A0931A5007676FF /* Main.IPad.storyboard */,
 				530388BF1A08094F001602ED /* Main.IPhone.storyboard */,
+				530A61141A0AA4B300E214FE /* RTPathView.h */,
+				530A61151A0AA4B300E214FE /* RTPathView.m */,
 				530A61111A0A8EF300E214FE /* RTMountainPath.h */,
 				530A61121A0A8EF300E214FE /* RTMountainPath.m */,
-				530388BC1A08094F001602ED /* ViewController.h */,
-				530388BD1A08094F001602ED /* ViewController.m */,
 				530388DE1A080A41001602ED /* RTSpaceShipView.h */,
 				530388DF1A080A41001602ED /* RTSpaceShipView.m */,
+				530388BC1A08094F001602ED /* ViewController.h */,
+				530388BD1A08094F001602ED /* ViewController.m */,
 				530388C21A08094F001602ED /* Images.xcassets */,
 				530388C41A08094F001602ED /* LaunchScreen.xib */,
 				530388B51A08094F001602ED /* Supporting Files */,
@@ -239,6 +244,7 @@
 				530388BE1A08094F001602ED /* ViewController.m in Sources */,
 				530A61131A0A8EF300E214FE /* RTMountainPath.m in Sources */,
 				530388E01A080A41001602ED /* RTSpaceShipView.m in Sources */,
+				530A61161A0AA4B300E214FE /* RTPathView.m in Sources */,
 				530388BB1A08094F001602ED /* AppDelegate.m in Sources */,
 				530388B81A08094F001602ED /* main.m in Sources */,
 			);
