@@ -12,7 +12,8 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) IBOutlet RTPathView *pathView;
+@property (strong, nonatomic) IBOutlet RTPathView *pathView; //Drag from storyboard
+@property (strong,nonatomic) NSTimer *timer;
 
 @end
 
@@ -28,6 +29,8 @@
     
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
     [self.pathView addGestureRecognizer:panRecognizer];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,5 +60,16 @@
     CGPoint tapLocation = [tapRecognizer locationInView: self.pathView];
     NSLog(@"Tap location is at point (%f,%f)", tapLocation.x, tapLocation.y);
 }
+
+-(void)timerFired
+{
+    NSLog(@"Timer fired");
+}
+
+
+
+
+
+
 
 @end
