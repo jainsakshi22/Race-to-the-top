@@ -10,6 +10,11 @@
 #import "RTPathView.h"
 #import "RTMountainPath.h"
 
+#define RTMAP_STARTING_SCORE 15000
+#define RTMAP_SCORE_DECREMENT_AMOUNT 100
+#define RTTimer_Interval 0.1
+#define RTWall_Penalty 500
+
 @interface ViewController ()
 
 @property (strong, nonatomic) IBOutlet RTPathView *pathView; //Drag from storyboard
@@ -30,7 +35,9 @@
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
     [self.pathView addGestureRecognizer:panRecognizer];
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:RTTimer_Interval target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
+    
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i",RTMAP_STARTING_SCORE];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,7 +55,8 @@
         
         if ([tapTarget containsPoint:fingerLocation])
         {
-            NSLog(@"You hit a wall");
+            //NSLog(@"You hit a wall");
+            [self decrementScoreByAmount:RTWall_Penalty];
         }
             
     }
@@ -63,10 +71,18 @@
 
 -(void)timerFired
 {
-    NSLog(@"Timer fired");
+   // NSLog(@"Timer fired");
+    [self decrementScoreByAmount:RTMAP_SCORE_DECREMENT_AMOUNT];
 }
 
-
+-(void)decrementScoreByAmount: (int)amount
+{
+    NSString *scoreText = [[self.scoreLabel.text componentsSeparatedByString:@" "] lastObject];
+    int score  = [scoreText intValue];
+    score = score - amount;
+    
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i",score];
+}
 
 
 
