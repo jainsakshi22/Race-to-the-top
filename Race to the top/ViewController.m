@@ -35,7 +35,7 @@
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panDetected:)];
     [self.pathView addGestureRecognizer:panRecognizer];
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:RTTimer_Interval target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
+   /* self.timer = [NSTimer scheduledTimerWithTimeInterval:RTTimer_Interval target:self selector:@selector(timerFired) userInfo:nil repeats:YES];*/
     
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i",RTMAP_STARTING_SCORE];
 }
@@ -48,18 +48,43 @@
 -(void)panDetected : (UIPanGestureRecognizer *)panRecognizer
 {
     CGPoint fingerLocation = [panRecognizer locationInView : self.pathView];
-   // NSLog(@"I'm at location (%f,%f)", fingerLocation.x, fingerLocation.y);
-    for (UIBezierPath *path in [RTMountainPath mountainPathsForRect:self.pathView.bounds])
+
+    if (panRecognizer.state == UIGestureRecognizerStateBegan && fingerLocation.y <=750)
     {
-        UIBezierPath *tapTarget = [RTMountainPath tapTargetForPath:path];
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:RTTimer_Interval target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
         
-        if ([tapTarget containsPoint:fingerLocation])
-        {
-            //NSLog(@"You hit a wall");
-            [self decrementScoreByAmount:RTWall_Penalty];
-        }
-            
+        self.scoreLabel.text = [NSString stringWithFormat:@"Score: %i",RTMAP_STARTING_SCORE];
     }
+    else if(panRecognizer.state == UIGestureRecognizerStateChanged)
+    {
+        for (UIBezierPath *path in [RTMountainPath mountainPathsForRect:self.pathView.bounds])
+        {
+            UIBezierPath *tapTarget = [RTMountainPath tapTargetForPath:path];
+            
+            if ([tapTarget containsPoint:fingerLocation])
+            {
+                //NSLog(@"You hit a wall");
+                [self decrementScoreByAmount:RTWall_Penalty];
+            }
+            
+        }
+    }
+    
+    else if (panRecognizer.state == UIGestureRecognizerStateEnded && fingerLocation.y <= 165)
+    {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Make sue to start with thte bottom of the path, hold your finger and finish at the top of the path" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        
+        [self.timer invalidate];
+        self.timer = nil;
+        
+    }
+    
 }
 
 -(void)tapDetected : (UITapGestureRecognizer *)tapRecognizer
