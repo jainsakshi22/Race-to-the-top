@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#include <CoreGraphics/CoreGraphics.h>
+//#include <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
 
 @interface RTMountainPath : NSObject
 
 +(NSArray *)mountainPathsForRect : (CGRect)rect;
+
++(UIBezierPath *)tapTargetForPath : (UIBezierPath *)path;
 
 @end

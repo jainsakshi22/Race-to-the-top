@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "RTPathView.h"
+#import "RTMountainPath.h"
 
 @interface ViewController ()
 
@@ -36,8 +37,18 @@
 
 -(void)panDetected : (UIPanGestureRecognizer *)panRecognizer
 {
-    CGPoint panLocation = [panRecognizer locationInView : self.pathView];
-    NSLog(@"I'm at location (%f,%f)", panLocation.x, panLocation.y);
+    CGPoint fingerLocation = [panRecognizer locationInView : self.pathView];
+   // NSLog(@"I'm at location (%f,%f)", fingerLocation.x, fingerLocation.y);
+    for (UIBezierPath *path in [RTMountainPath mountainPathsForRect:self.pathView.bounds])
+    {
+        UIBezierPath *tapTarget = [RTMountainPath tapTargetForPath:path];
+        
+        if ([tapTarget containsPoint:fingerLocation])
+        {
+            NSLog(@"You hit a wall");
+        }
+            
+    }
 }
 
 -(void)tapDetected : (UITapGestureRecognizer *)tapRecognizer
